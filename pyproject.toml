@@ -1,6 +1,6 @@
 [project]
 name = "cypher_wire"
-version = "0.0.0"
+version = "0.0.1"
 authors = [
     { name = "PaNDa2Code", email="moaaz0688@gmail.com" },
     { name = "Ahmad Gamal" },
@@ -17,8 +17,3 @@ classifiers = [
 [project.urls]
 github = "https://github.com/PaNDa2code/CypherWire.git"
 pypi = "https://pypi.org/project/CypherWire"
-
-[tool.pytest.ini_options]
-addopts = [
-    "--import-mode=importlib",
-]
