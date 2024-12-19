@@ -17,3 +17,8 @@ classifiers = [
 [project.urls]
 github = "https://github.com/PaNDa2code/CypherWire.git"
 pypi = "https://pypi.org/project/CypherWire"
+
+[tool.pytest.ini_options]
+addopts = [
+    "--import-mode=importlib",
+]
