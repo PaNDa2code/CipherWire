@@ -1,2 +1,2 @@
-.pytest_cashe/*
-*__pychashe__/*
+.pytest_cache
+*.pyc
