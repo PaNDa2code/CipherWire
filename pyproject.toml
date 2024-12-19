@@ -1,0 +1,19 @@
+[project]
+name = "cypher_wire"
+version = "0.0.0"
+authers = [
+    { name = "PaNDa2Code", email="moaaz0688@gmail.com" },
+    { name = "Ahmad Gamal" },
+    { name = "Eslam Nasr" },
+]
+
+description = ""
+readme = "README.md"
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+]
+
+[project.urls]
+github = "https://github.com/PaNDa2code/CypherWire.git"
+pypi = "https://pypi.org/project/CypherWire"
