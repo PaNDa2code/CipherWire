@@ -9,6 +9,10 @@ class CaesarCipher:
 
     @staticmethod
     def encrypt(plan_text: str, key: int) -> str:
+        try:
+            key = int(key)
+        except:
+            raise TypeError("Key should be a numeric value")
         cypher_text = []
         for c in plan_text:
             if c.isalpha():
@@ -22,6 +26,10 @@ class CaesarCipher:
 
     @staticmethod
     def decrypt(cypher_text: str, key: int) -> str:
+        try:
+            key = int(key)
+        except:
+            raise TypeError("Key should be a numeric value")
         plan_text = []
         for c in cypher_text:
             if c.isalpha():

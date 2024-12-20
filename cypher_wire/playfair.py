@@ -11,6 +11,9 @@ class Playfair:
     def __generate_matrix_key(key: str) -> Tuple[List[List[str]], Dict[str, Tuple[int, int]]]:
         unique_chars = []
         for char in key.upper():
+            if not char.isalpha():
+                raise ValueError("Playfair key can't have a numaric chracter")
+
             if char not in unique_chars:
                 if char == "J":
                     char = "I"
@@ -32,14 +35,21 @@ class Playfair:
         return matrix, lookup
 
     @staticmethod
-    def __split_into_pairs(text: str, filler: str = 'x') -> List[str]:
+    def __split_into_pairs(text: str, filler: str = 'X') -> List[str]:
         text = text.replace(" ", "")
         pairs = []
         i = 0
+
         while i < len(text):
-            char1 = text[i]
+            if not text[i].isalpha():
+                raise ValueError("Playfair plantext can't have a numeric character")
+            char1 = text[i].upper()
+
             if i + 1 < len(text):
-                char2 = text[i + 1]
+                if not text[i + 1].isalpha():
+                    raise ValueError("Playfair plantext can't have a numeric character")
+                char2 = text[i + 1].upper()
+
                 if char1 != char2:
                     pairs.append(char1 + char2)
                     i += 2
@@ -53,7 +63,7 @@ class Playfair:
         return pairs
 
     @staticmethod
-    def encrypt(key: str, plan_text: str) -> str:
+    def encrypt(plan_text: str, key: str) -> str:
         matrix, lookup = Playfair.__generate_matrix_key(key)
         pairs = Playfair.__split_into_pairs(plan_text)
 
