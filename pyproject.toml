@@ -1,6 +1,6 @@
 [project]
 name = "cipher_wire"
-version = "0.0.1"
+version = "0.0.2"
 authors = [
     { name = "PaNDa2Code", email="moaaz0688@gmail.com" },
     { name = "Ahmad Gamal" },
