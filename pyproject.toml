@@ -1,6 +1,6 @@
 [project]
 name = "cipher_wire"
-version = "0.0.2"
+version = "0.0.3"
 authors = [
     { name = "PaNDa2Code", email="moaaz0688@gmail.com" },
     { name = "Ahmad Gamal" },
@@ -13,6 +13,9 @@ classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
 ]
+
+[project.scripts]
+cipher_wire = "cipher_wire.__main__:main"
 
 [project.urls]
 github = "https://github.com/PaNDa2code/CypherWire.git"
